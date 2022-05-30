@@ -7,7 +7,8 @@ import kotlinx.android.parcel.Parcelize
 data class Data(
     val name: String,
     val photoUrl: String,
-    val description: String
-    val akun: String,
-    val harga: String
+    val description: String,
+    val account: String,
+    val price: String,
+    val category: String
 ) : Parcelable

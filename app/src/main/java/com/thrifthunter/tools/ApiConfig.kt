@@ -18,7 +18,7 @@ class ApiConfig {
             .addInterceptor(loggingInterceptor)
             .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://story-api.dicoding.dev/v1/")
+            .baseUrl("https://spatial-lodge-350205.et.r.appspot.com/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

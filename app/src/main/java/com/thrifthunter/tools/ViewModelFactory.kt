@@ -4,10 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.auth.LoginViewModel
 import com.thrifthunter.auth.RegistrationViewModel
-import com.thrifthunter.tools.UserPreferences
+import com.thrifthunter.auth.UserPreference
 import com.thrifthunter.paging.Injection
 
-class ViewModelFactory(private val mpreference: UserPreferences, private val token: String) : ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory(private val mpreference: UserPreference, private val token: String) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

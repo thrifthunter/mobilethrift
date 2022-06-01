@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.thrifthunter.DetailActivity
-import com.thrifthunter.Data
 import com.thrifthunter.databinding.UserItemBinding
+import com.thrifthunter.tools.ProductData
 
-class ListUserAdapter: PagingDataAdapter<ListStory, ListUserAdapter.ListViewHolder>(DIFF_CALLBACK) {
+class ListUserAdapter: PagingDataAdapter<ListItem, ListUserAdapter.ListViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -34,14 +34,14 @@ class ListUserAdapter: PagingDataAdapter<ListStory, ListUserAdapter.ListViewHold
 
     class ListViewHolder(private val binding: UserItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(user: ListStory) {
+        fun bind(user: ListItem) {
             Glide.with(binding.root.context)
                 .load(user.photoUrl)
                 .into(binding.imgItemPhoto)
             binding.tvItemName.text = user.name
 
             binding.root.setOnClickListener {
-                val dataUser = Data(user.name, user.photoUrl, user.description, user.akun, user.harga)
+                val dataUser = ProductData(user.name, user.photoUrl, user.description, user.account, user.price, user.category)
                 val intent = Intent(binding.root.context, DetailActivity::class.java)
                 intent.putExtra("User", dataUser)
 
@@ -58,12 +58,12 @@ class ListUserAdapter: PagingDataAdapter<ListStory, ListUserAdapter.ListViewHold
     }
 
     companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ListStory>() {
-            override fun areItemsTheSame(oldItem: ListStory, newItem: ListStory): Boolean {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ListItem>() {
+            override fun areItemsTheSame(oldItem: ListItem, newItem: ListItem): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: ListStory, newItem: ListStory): Boolean {
+            override fun areContentsTheSame(oldItem: ListItem, newItem: ListItem): Boolean {
                 return oldItem.id == newItem.id
             }
         }

@@ -15,11 +15,11 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.thrifthunter.settings.ListUserAdapter
 import com.thrifthunter.auth.LoginActivity
-import com.thrifthunter.tools.UserPreferences
+import com.thrifthunter.auth.UserPreference
 import com.thrifthunter.databinding.ActivityMainBinding
 import com.thrifthunter.paging.LoadingStateAdapter
+import com.thrifthunter.settings.ListUserAdapter
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -52,12 +52,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setViewModel() {
 
-        UserPreferences.getInstance(dataStore).getStories().asLiveData().observe(this) { userData ->
+        UserPreference.getInstance(dataStore).getItems().asLiveData().observe(this) { userData ->
             val getToken = userData.token
 
             mainViewModel = ViewModelProvider(
                 this,
-                ViewModelFactory(UserPreferences.getInstance(dataStore), getToken)
+                ViewModelFactory(UserPreference.getInstance(dataStore), getToken)
             )[MainViewModel::class.java]
 
             mainViewModel.getStories().observe(this) { user ->
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 }
             )
 
-            mainViewModel.story.observe(this) {
+            mainViewModel.item.observe(this) {
                 if (it!=null) {
                     adapter.submitData(lifecycle, it)
                     binding.recycleView.adapter = adapter

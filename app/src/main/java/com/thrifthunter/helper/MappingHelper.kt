@@ -1,13 +1,13 @@
 package com.thrifthunter.helper
 
 import android.database.Cursor
-import com.thrifthunter.Data
 import com.thrifthunter.database.DatabaseContract
+import com.thrifthunter.tools.FavoriteData
 
 object MappingHelper {
 
-    fun mapCursorToArrayList(notesCursor: Cursor?): ArrayList<Data> {
-        val favoriteList = ArrayList<Data>()
+    fun mapCursorToArrayList(notesCursor: Cursor?): ArrayList<FavoriteData> {
+        val favoriteList = ArrayList<FavoriteData>()
 
         notesCursor?.apply {
             while (moveToNext()) {
@@ -17,10 +17,9 @@ object MappingHelper {
                 val company = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.COMPANY))
                 val location = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.LOCATION))
                 val repository = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.REPOSITORY))
-                val favorite =
-                    getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.FAVORITE))
+                val favorite = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.FAVORITE))
                 favoriteList.add(
-                    Data(username, name, avatar, company, location, repository, favorite)
+                    FavoriteData(username, name, avatar, company, location, repository, favorite)
                 )
             }
         }

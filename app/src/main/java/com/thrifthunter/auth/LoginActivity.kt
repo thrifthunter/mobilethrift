@@ -22,9 +22,8 @@ import com.thrifthunter.ApiConfig
 import com.thrifthunter.MainActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
-import com.thrifthunter.settings.LoginResponse
 import com.thrifthunter.databinding.ActivityLoginBinding
-import com.thrifthunter.tools.UserPreferences
+import com.thrifthunter.settings.LoginResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -119,7 +118,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setViewModel() {
-        loginViewModel = ViewModelProvider(this, ViewModelFactory(UserPreferences.getInstance(dataStore), "")
+        loginViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore), "")
         )[LoginViewModel::class.java]
 
         loginViewModel.getUser().observe(this) { user ->

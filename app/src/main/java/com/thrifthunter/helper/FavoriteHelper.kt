@@ -1,13 +1,13 @@
-package com.example.githubusers2.helper
+package com.thrifthunter.helper
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
-import com.example.githubusers2.database.DatabaseContract.FavColumns.Companion.TABLE_NAME
-import com.example.githubusers2.database.DatabaseContract.FavColumns.Companion.USERNAME
-import com.example.githubusers2.database.DatabaseHelper
+import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.TABLE_NAME
+import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.USERNAME
+import com.thrifthunter.database.DatabaseHelper
 
 class FavoriteHelper(context: Context) {
 

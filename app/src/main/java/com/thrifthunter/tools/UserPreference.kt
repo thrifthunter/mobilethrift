@@ -8,9 +8,9 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class StoriesPreference private constructor(private val dataStore: DataStore<Preferences>){
+class UserPreference private constructor(private val dataStore: DataStore<Preferences>){
 
-    fun getStories(): Flow<UserModel> {
+    fun getItems(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
             UserModel(
                 preferences[NAME] ?:"",
@@ -47,7 +47,7 @@ class StoriesPreference private constructor(private val dataStore: DataStore<Pre
 
     companion object {
         @Volatile
-        private var INSTANCE: StoriesPreference? = null
+        private var INSTANCE: UserPreference? = null
 
         private val NAME = stringPreferencesKey("name")
         private val EMAIL = stringPreferencesKey("email")
@@ -55,9 +55,9 @@ class StoriesPreference private constructor(private val dataStore: DataStore<Pre
         private val STATUS = booleanPreferencesKey("state")
         private val TOKEN = stringPreferencesKey("token")
 
-        fun getInstance(dataStore: DataStore<Preferences>): StoriesPreference {
+        fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {
-                val instance = StoriesPreference(dataStore)
+                val instance = UserPreference(dataStore)
                 INSTANCE = instance
                 instance
             }

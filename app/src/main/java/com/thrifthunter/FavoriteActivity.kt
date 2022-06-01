@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.CONTENT_URI
 import com.thrifthunter.helper.MappingHelper
+import com.thrifthunter.tools.FavoriteData
 import kotlinx.android.synthetic.main.activity_favorite.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -51,7 +51,7 @@ class FavoriteActivity : AppCompatActivity(), View.OnClickListener {
         if (savedInstanceState == null) {
             loadAsync()
         } else {
-            val list: ArrayList<Data>? = savedInstanceState.getParcelableArrayList<Data>(
+            val list: ArrayList<FavoriteData>? = savedInstanceState.getParcelableArrayList<FavoriteData>(
                 EXTRA_STATE)
             if (list != null) {
                 adapter.listFavorite = list

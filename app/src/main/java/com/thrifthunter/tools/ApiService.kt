@@ -1,8 +1,6 @@
 package com.thrifthunter.settings
 
 import com.google.gson.annotations.SerializedName
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -44,10 +42,10 @@ data class GetResponse(
     val message: String,
 
     @field:SerializedName("listStory")
-    val listStory: List<ListStory>
+    val listItem: List<ListItem>
 )
 
-data class ListStory(
+data class ListItem(
     @field:SerializedName("id")
     val id: String,
 
@@ -60,22 +58,14 @@ data class ListStory(
     @field:SerializedName("photoUrl")
     val photoUrl: String,
 
-    @field:SerializedName("createdAt")
-    val createdAt: String,
+    @field:SerializedName("account")
+    val account: String,
 
-    @field:SerializedName("lat")
-    val lat: Double,
+    @field:SerializedName("price")
+    val price: String,
 
-    @field:SerializedName("lon")
-    val lon: Double
-)
-
-data class FileUploadResponse(
-    @field:SerializedName("error")
-    val error: Boolean,
-
-    @field:SerializedName("message")
-    val message: String
+    @field:SerializedName("category")
+    val category: String
 )
 
 interface ApiService {
@@ -94,23 +84,10 @@ interface ApiService {
         @Field("password") password: String
     ) : Call<LoginResponse>
 
-    @GET("stories")
+    @GET("items")
     suspend fun getStories(
         @Query("page") page: Int?,
         @Query("size") size: Int?,
         @Header("Authorization") token: String
     ): GetResponse
-
-    @Multipart
-    @POST("stories")
-    fun uploadStory(
-        @Part file: MultipartBody.Part,
-        @Part("description") description: RequestBody,
-        @Header("Authorization") token: String
-    ) : Call<FileUploadResponse>
-
-    @GET("stories?location=1")
-    fun getMarkers(
-        @Header("Authorization") token: String
-    ) : Call<GetResponse>
 }

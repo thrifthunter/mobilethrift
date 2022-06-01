@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.thrifthunter.tools.FavoriteData
 import kotlinx.android.synthetic.main.user_item.view.*
 
 class FavoriteAdapter(private val activity: Activity) : RecyclerView.Adapter<FavoriteAdapter.NoteViewHolder>() {
-    var listFavorite = ArrayList<Data>()
+    var listFavorite = ArrayList<FavoriteData>()
         set(listFavorite) {
             if (listFavorite.size > 0) {
                 this.listFavorite.clear()
@@ -33,7 +34,7 @@ class FavoriteAdapter(private val activity: Activity) : RecyclerView.Adapter<Fav
     override fun getItemCount(): Int = this.listFavorite.size
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(fav: Data) {
+        fun bind(fav: FavoriteData) {
             with(itemView) {
                 Glide.with(itemView.context)
                     .load(fav.photoUrl)

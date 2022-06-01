@@ -16,9 +16,8 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.ApiConfig
 import com.thrifthunter.ViewModelFactory
-import com.thrifthunter.settings.RegisterResponse
 import com.thrifthunter.databinding.ActivityRegistrationBinding
-import com.thrifthunter.tools.UserPreferences
+import com.thrifthunter.settings.RegisterResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -113,7 +112,7 @@ class RegistrationActivity : AppCompatActivity() {
     private fun setViewModel() {
         signupViewModel = ViewModelProvider(
             this,
-            ViewModelFactory(UserPreferences.getInstance(dataStore), "")
+            ViewModelFactory(UserPreference.getInstance(dataStore), "")
         )[RegistrationViewModel::class.java]
     }
 }

@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.auth.LoginActivity
-import com.thrifthunter.auth.UserPreference
+import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.databinding.ActivityMainBinding
 import com.thrifthunter.paging.LoadingStateAdapter
 import com.thrifthunter.settings.ListUserAdapter

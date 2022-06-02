@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.thrifthunter.auth.UserModel
-import com.thrifthunter.auth.UserPreference
+import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.paging.TheRepository
 import com.thrifthunter.settings.ListItem
 import kotlinx.coroutines.launch

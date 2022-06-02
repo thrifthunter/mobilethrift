@@ -7,7 +7,6 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.githubusers2.helper.FavoriteHelper
 import com.thrifthunter.databinding.ActivityDetailBinding
 import com.thrifthunter.helper.FavoriteHelper
 import com.thrifthunter.tools.FavoriteData
@@ -82,15 +81,15 @@ class DetailActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setDataObject() {
-        val favoriteUser = intent.getParcelableExtra(EXTRA_NOTE) as FavoriteData
-        favoriteUser.name?.let { setActionBarTitle(it) }
-        detail_name.text = favoriteUser.name
-        detail_description.text = favoriteUser.description
-        detail_akun.text = favoriteUser.account
-        detail_harga.text = favoriteUser.price
+        val favoriteUser = intent.getParcelableExtra(EXTRA_NOTE) as FavoriteData?
+        favoriteUser?.name?.let { setActionBarTitle(it) }
+        detail_name.text = favoriteUser?.name
+        detail_description.text = favoriteUser?.description
+        detail_akun.text = favoriteUser?.account
+        detail_harga.text = favoriteUser?.price
         Glide.with(this)
-            .load(favoriteUser.photoUrl)
+            .load(favoriteUser?.photoUrl)
             .into(detail_photo)
-        imageAvatar = favoriteUser.photoUrl.toString()
+        imageAvatar = favoriteUser?.photoUrl.toString()
     }
 }

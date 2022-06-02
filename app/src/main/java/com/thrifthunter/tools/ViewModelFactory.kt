@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.auth.LoginViewModel
 import com.thrifthunter.auth.RegistrationViewModel
-import com.thrifthunter.auth.UserPreference
+import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.paging.Injection
 
 class ViewModelFactory(private val mpreference: UserPreference, private val token: String) : ViewModelProvider.NewInstanceFactory() {

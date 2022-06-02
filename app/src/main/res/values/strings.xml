@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Story App</string>
+    <string name="app_name">Thrift Hunter</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>

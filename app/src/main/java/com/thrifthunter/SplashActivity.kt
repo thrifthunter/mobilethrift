@@ -12,7 +12,6 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.tools.UserPreference
 
@@ -40,7 +39,7 @@ class SplashActivity : AppCompatActivity() {
                     ViewModelFactory(UserPreference.getInstance(dataStore), getToken)
                 )[SplashViewModel::class.java]
 
-                splashViewModel.getStories().observe(this) { user ->
+                splashViewModel.getItems().observe(this) { user ->
                     if (user.token == "") {
                         startActivity(Intent(this, LoginActivity::class.java))
                         finish()

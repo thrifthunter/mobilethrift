@@ -8,7 +8,7 @@ import com.thrifthunter.tools.UserPreference
 
 class SplashViewModel(private val userPreference: UserPreference) :
     ViewModel() {
-    fun getStories(): LiveData<UserModel> {
+    fun getItems(): LiveData<UserModel> {
         return userPreference.getItems().asLiveData()
     }
 }

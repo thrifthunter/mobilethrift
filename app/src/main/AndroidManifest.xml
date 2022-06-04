@@ -34,9 +34,8 @@
         <activity
             android:name=".LauncherActivity"
             android:exported="false" />
-
         <activity
-            android:name=".SplashActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".DetailActivity"
@@ -48,7 +47,7 @@
             android:name=".auth.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

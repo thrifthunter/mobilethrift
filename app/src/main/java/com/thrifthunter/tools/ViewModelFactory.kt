@@ -21,6 +21,9 @@ class ViewModelFactory(private val mpreference: UserPreference, private val toke
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(mpreference) as T
             }
+            modelClass.isAssignableFrom(SplashViewModel::class.java) -> {
+                SplashViewModel(mpreference) as T
+            }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

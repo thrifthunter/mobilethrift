@@ -1,4 +1,14 @@
 package com.thrifthunter
 
-class SplashViewModel {
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.thrifthunter.auth.UserModel
+import com.thrifthunter.tools.UserPreference
+
+class SplashViewModel(private val userPreference: UserPreference) :
+    ViewModel() {
+    fun getStories(): LiveData<UserModel> {
+        return userPreference.getItems().asLiveData()
+    }
 }

@@ -1,6 +1,8 @@
 package com.thrifthunter.tools
 
 import com.google.gson.annotations.SerializedName
+import com.thrifthunter.objects.Login
+import com.thrifthunter.objects.Register
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -72,17 +74,19 @@ interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("register")
     fun registerUser(
-        @Field("name") name: String,
-        @Field("email") email: String,
-        @Field("password") password: String,
-        @Field("phone") phone: String,
+        @Body register: Register
+//        @Field("name") name: String,
+//        @Field("email") email: String,
+//        @Field("password") password: String,
+//        @Field("phone") phone: String
     ) : Call<RegisterResponse>
 
     @Headers("Content-Type: application/json")
     @POST("login")
     fun loginUser(
-        @Field("email") email: String,
-        @Field("password") password: String
+        @Body login: Login
+//        @Field("email") email: String,
+//        @Field("password") password: String
     ) : Call<LoginResponse>
 
     @GET("items")

@@ -11,17 +11,25 @@ object MappingHelper {
 
         notesCursor?.apply {
             while (moveToNext()) {
-                val username = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.USERNAME))
+                val id = getInt(getColumnIndexOrThrow(DatabaseContract.FavColumns.ID))
                 val name = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.NAME))
-                val avatar = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.AVATAR))
-                val company = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.COMPANY))
-                val location = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.LOCATION))
-                val repository = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.REPOSITORY))
+                val photo = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.PHOTO))
+                val description = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.DESCRIPTION))
+                val account = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.ACCOUNT))
+                val price = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.PRICE))
+                val category = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.CATEGORY))
                 val favorite = getString(getColumnIndexOrThrow(DatabaseContract.FavColumns.FAVORITE))
                 favoriteList.add(
-                    FavoriteData(username, name, avatar, company, location, repository, favorite)
+                    FavoriteData(id, name, photo, description, account, price, category, favorite)
                 )
             }
+//            val name: String,
+//            val photoUrl: String,
+//            val description: String,
+//            val account: String,
+//            val price: String,
+//            val category: String,
+//            var isFav: String? = null
         }
         return favoriteList
     }

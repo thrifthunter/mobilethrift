@@ -12,12 +12,13 @@ internal class DatabaseHelper(context: Context) :
         private const val DATABASE_NAME = "userDB"
         private const val DATABASE_VERSION = 1
         private const val SQL_CREATE_TABLE_NOTE = "CREATE TABLE $TABLE_NAME" +
-                " (${DatabaseContract.FavColumns.USERNAME} TEXT PRIMARY KEY  NOT NULL," +
+                " (${DatabaseContract.FavColumns.ID} TEXT PRIMARY KEY  NOT NULL," +
                 " ${DatabaseContract.FavColumns.NAME} TEXT NOT NULL," +
-                " ${DatabaseContract.FavColumns.AVATAR} TEXT NOT NULL," +
-                " ${DatabaseContract.FavColumns.COMPANY} TEXT NOT NULL," +
-                " ${DatabaseContract.FavColumns.LOCATION} TEXT NOT NULL," +
-                " ${DatabaseContract.FavColumns.REPOSITORY} TEXT NOT NULL," +
+                " ${DatabaseContract.FavColumns.PHOTO} TEXT NOT NULL," +
+                " ${DatabaseContract.FavColumns.DESCRIPTION} TEXT NOT NULL," +
+                " ${DatabaseContract.FavColumns.ACCOUNT} TEXT NOT NULL," +
+                " ${DatabaseContract.FavColumns.PRICE} TEXT NOT NULL," +
+                " ${DatabaseContract.FavColumns.CATEGORY} TEXT NOT NULL," +
                 " ${DatabaseContract.FavColumns.FAVORITE} TEXT NOT NULL)"
     }
 

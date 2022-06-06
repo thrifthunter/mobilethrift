@@ -11,12 +11,13 @@ object DatabaseContract {
     class FavColumns : BaseColumns {
         companion object {
             const val TABLE_NAME = "favorite"
-            const val USERNAME = "username"
+            const val ID = "itemid"
             const val NAME = "name"
-            const val AVATAR = "avatar"
-            const val COMPANY = "company"
-            const val LOCATION = "location"
-            const val REPOSITORY = "repository"
+            const val PHOTO = "photo"
+            const val DESCRIPTION = "description"
+            const val ACCOUNT = "account"
+            const val PRICE = "price"
+            const val CATEGORY = "category"
             const val FAVORITE = "isFav"
 
             val CONTENT_URI: Uri = Uri.Builder().scheme(SCHEME)

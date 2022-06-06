@@ -5,8 +5,8 @@ import android.content.Context
 import android.database.Cursor
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
+import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.ID
 import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.TABLE_NAME
-import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.USERNAME
 import com.thrifthunter.database.DatabaseHelper
 
 class FavoriteHelper(context: Context) {
@@ -44,7 +44,7 @@ class FavoriteHelper(context: Context) {
             null,
             null,
             null,
-            "$USERNAME ASC"
+            "$ID DESC"
         )
     }
 
@@ -53,7 +53,7 @@ class FavoriteHelper(context: Context) {
         return database.query(
             DATABASE_TABLE,
             null,
-            "$USERNAME = ?",
+            "$ID = ?",
             arrayOf(id),
             null,
             null,
@@ -69,12 +69,12 @@ class FavoriteHelper(context: Context) {
 
     // this for update data
     fun update(id: String, values: ContentValues?): Int {
-        return database.update(DATABASE_TABLE, values, "$USERNAME = ?", arrayOf(id))
+        return database.update(DATABASE_TABLE, values, "$ID = ?", arrayOf(id))
     }
 
     // and this for delete
     fun deleteById(id: String): Int {
-        return database.delete(DATABASE_TABLE, "$USERNAME = '$id'", null)
+        return database.delete(DATABASE_TABLE, "$ID = '$id'", null)
     }
 
 }

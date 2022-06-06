@@ -41,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
 
                 splashViewModel.getItems().observe(this) { user ->
                     if (user.token == "") {
-                        startActivity(Intent(this, LoginActivity::class.java))
+                        startActivity(Intent(this, LauncherActivity::class.java))
                         finish()
                     }
                     else {

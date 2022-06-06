@@ -20,9 +20,4 @@ class TheRepository(private val apiService: ApiService, private val token: Strin
             }
         ).liveData
     }
-
-    fun loginUser() {
-
-    }
-
 }

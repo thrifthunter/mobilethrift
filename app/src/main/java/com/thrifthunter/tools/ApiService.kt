@@ -19,8 +19,8 @@ data class LoginResponse(
     @field:SerializedName("message")
     val message: String,
 
-    @field:SerializedName("loginResult")
-    val loginResult: LoginResultResponse
+    @field:SerializedName("values")
+    val values: LoginResultResponse
 )
 
 data class LoginResultResponse(
@@ -69,16 +69,16 @@ data class ListItem(
 )
 
 interface ApiService {
-    @Headers("Content-Type: application/json")
+    @FormUrlEncoded
     @POST("register")
     fun registerUser(
         @Field("name") name: String,
         @Field("email") email: String,
         @Field("password") password: String,
-        @Field("phone") phone: String,
+        @Field("phone") phone: String
     ) : Call<RegisterResponse>
 
-    @Headers("Content-Type: application/json")
+    @FormUrlEncoded
     @POST("login")
     fun loginUser(
         @Field("email") email: String,

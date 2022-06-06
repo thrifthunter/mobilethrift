@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                             if (response.isSuccessful) {
                                 val responseBody = response.body()
                                 if (responseBody != null && !responseBody.error) {
-                                    loginViewModel.login(responseBody.loginResult.token)
+                                    loginViewModel.login(responseBody.values.token)
                                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                                     Toast.makeText(this@LoginActivity, "Successfully Login!", Toast.LENGTH_SHORT).show()
                                 }

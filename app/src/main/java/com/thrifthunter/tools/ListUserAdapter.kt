@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.thrifthunter.DetailActivity
 import com.thrifthunter.databinding.UserItemBinding
+import com.thrifthunter.tools.ListItem
 import com.thrifthunter.tools.ProductData
 
 class ListUserAdapter: PagingDataAdapter<ListItem, ListUserAdapter.ListViewHolder>(DIFF_CALLBACK) {

@@ -1,7 +1,7 @@
 package com.thrifthunter
 
 import androidx.viewbinding.BuildConfig
-import com.thrifthunter.settings.ApiService
+import com.thrifthunter.tools.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

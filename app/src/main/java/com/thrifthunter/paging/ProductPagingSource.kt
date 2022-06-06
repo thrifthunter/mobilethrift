@@ -2,8 +2,8 @@ package com.thrifthunter.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.thrifthunter.settings.ApiService
-import com.thrifthunter.settings.ListItem
+import com.thrifthunter.tools.ApiService
+import com.thrifthunter.tools.ListItem
 
 class ThePagingSource(private val apiService: ApiService, private val token: String) : PagingSource<Int, ListItem>() {
 

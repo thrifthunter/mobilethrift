@@ -1,4 +1,4 @@
-package com.thrifthunter.settings
+package com.thrifthunter.tools
 
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
@@ -69,7 +69,7 @@ data class ListItem(
 )
 
 interface ApiService {
-    @FormUrlEncoded
+    @Headers("Content-Type: application/json")
     @POST("register")
     fun registerUser(
         @Field("name") name: String,
@@ -78,7 +78,7 @@ interface ApiService {
         @Field("phone") phone: String,
     ) : Call<RegisterResponse>
 
-    @FormUrlEncoded
+    @Headers("Content-Type: application/json")
     @POST("login")
     fun loginUser(
         @Field("email") email: String,

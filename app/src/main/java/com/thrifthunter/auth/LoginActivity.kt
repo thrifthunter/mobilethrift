@@ -23,7 +23,7 @@ import com.thrifthunter.MainActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.databinding.ActivityLoginBinding
-import com.thrifthunter.settings.LoginResponse
+import com.thrifthunter.tools.LoginResponse
 import com.thrifthunter.tools.UserPreference
 import retrofit2.Call
 import retrofit2.Callback

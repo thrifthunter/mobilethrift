@@ -20,7 +20,7 @@ import com.thrifthunter.ApiConfig
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.databinding.ActivityRegistrationBinding
-import com.thrifthunter.settings.RegisterResponse
+import com.thrifthunter.tools.RegisterResponse
 import com.thrifthunter.tools.UserPreference
 import retrofit2.Call
 import retrofit2.Callback

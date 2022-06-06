@@ -5,8 +5,8 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.liveData
-import com.thrifthunter.settings.ApiService
-import com.thrifthunter.settings.ListItem
+import com.thrifthunter.tools.ApiService
+import com.thrifthunter.tools.ListItem
 
 class TheRepository(private val apiService: ApiService, private val token: String) {
 

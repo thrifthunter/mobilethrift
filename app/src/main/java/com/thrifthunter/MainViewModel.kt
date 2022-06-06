@@ -9,7 +9,7 @@ import androidx.paging.cachedIn
 import com.thrifthunter.auth.UserModel
 import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.paging.TheRepository
-import com.thrifthunter.settings.ListItem
+import com.thrifthunter.tools.ListItem
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val mpreference: UserPreference, theRepository: TheRepository) :

@@ -6,8 +6,10 @@ import android.os.Build
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
@@ -15,6 +17,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.ApiConfig
+import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.databinding.ActivityRegistrationBinding
 import com.thrifthunter.settings.RegisterResponse
@@ -25,7 +28,7 @@ import retrofit2.Response
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class RegistrationActivity : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityRegistrationBinding
     private lateinit var signupViewModel: RegistrationViewModel
@@ -34,6 +37,9 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val btnAuth: Button = findViewById(R.id.btn_reg)
+        btnAuth.setOnClickListener(this)
 
         binding.btnShow.setOnClickListener {
             if(binding.btnShow.text.toString().equals("Show")){
@@ -55,6 +61,7 @@ class RegistrationActivity : AppCompatActivity() {
             val name = binding.edtName.text.toString()
             val email = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
+            val phone = binding.edtPhone.text.toString()
             when {
                 name.isEmpty() -> {
                     binding.edtName.error = "Name cannot be empty!"
@@ -68,9 +75,12 @@ class RegistrationActivity : AppCompatActivity() {
                 password.isEmpty() -> {
                     binding.edtPassword.error = "Password cannot be empty!"
                 }
+                phone.isEmpty() -> {
+                    binding.edtPhone.error = "Phone number cannot be empty!"
+                }
                 else -> {
-                    signupViewModel.saveUser(UserModel(name, email, password, false, ""))
-                    val service = ApiConfig().getApiService().registerUser(name, email, password)
+                    signupViewModel.saveUser(UserModel(name, email, password, phone,false, ""))
+                    val service = ApiConfig().getApiService().registerUser(name, email, password, phone)
                     service.enqueue(object : Callback<RegisterResponse> {
                         override fun onResponse(
                             call: Call<RegisterResponse>,
@@ -115,5 +125,14 @@ class RegistrationActivity : AppCompatActivity() {
             this,
             ViewModelFactory(UserPreference.getInstance(dataStore), "")
         )[RegistrationViewModel::class.java]
+    }
+
+    override fun onClick(view: View?) {
+        when (view?.id) {
+            R.id.btn_reg -> {
+                val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }

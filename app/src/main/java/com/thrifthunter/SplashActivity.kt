@@ -18,15 +18,12 @@ import com.thrifthunter.tools.UserPreference
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class SplashActivity : AppCompatActivity() {
-//    private lateinit var mUserPreferences: UserPreference
     private lateinit var splashViewModel : SplashViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-//        mUserPreferences = UserPreference(this)
-//        val userModel = mUserPreferences.getItems()
 
         Handler(Looper.getMainLooper()).postDelayed({
             UserPreference.getInstance(dataStore).getItems().asLiveData().observe(this) { userData ->
@@ -50,14 +47,6 @@ class SplashActivity : AppCompatActivity() {
                     }
                 }
             }
-//            if (userModel.token != "") {
-//                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-//                finish()
-//            }
-//            else {
-//                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
-//                finish()
-//            }
         },1000)
     }
 }

@@ -24,13 +24,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="520dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="240dp"
             android:background="@drawable/layout_bg_primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/reg_top"
@@ -121,13 +123,14 @@
 
             <Button
                 android:id="@+id/btn_register"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="72dp"
                 android:layout_marginRight="32dp"
                 android:backgroundTint="@color/secondary"
-                android:paddingStart="140dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
                 android:text="@string/register"
                 android:textAlignment="center"
                 android:textColor="@color/primary"

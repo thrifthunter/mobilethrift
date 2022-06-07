@@ -1,15 +1,26 @@
 package com.thrifthunter
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import com.thrifthunter.auth.RegistrationActivity
 import com.thrifthunter.auth.UserModel
 import com.thrifthunter.databinding.ActivityProfileBinding
+import com.thrifthunter.tools.UserPreference
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
+    private lateinit var profileViewModel : ProfileViewModel
     private lateinit var binding: ActivityProfileBinding
     private var isPreferenceEmpty = false
     private lateinit var userModel: UserModel
@@ -24,32 +35,58 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         showExistingPreference()
 
         binding.btnSave.setOnClickListener(this)
-
     }
 
     private fun showExistingPreference() {
-        populateView(userModel)
-        checkForm(userModel)
+        populateView()
+        checkForm()
     }
 
-    private fun populateView(userModel: UserModel) {
-        binding.tvName.text =
-            if (userModel.name.isEmpty()) "NULL" else userModel.name
-        binding.tvEmail.text =
-            if (userModel.email.isEmpty()) "NULL" else userModel.email
-        binding.tvPassword.text =
-            if (userModel.password.isEmpty()) "NULL" else userModel.password
-    }
+    private fun populateView() {
+        UserPreference.getInstance(dataStore).getItems().asLiveData().observe(this) { userData ->
+            val getToken = userData.token
 
-    private fun checkForm(userModel: UserModel) {
-        when {
-            userModel.name.isNotEmpty() -> {
-                binding.btnSave.text = getString(R.string.change)
-                isPreferenceEmpty = false
+            Log.e("Token", getToken)
+
+            profileViewModel = ViewModelProvider(
+                this,
+                ViewModelFactory(UserPreference.getInstance(dataStore), getToken)
+            )[ProfileViewModel::class.java]
+
+            profileViewModel.getItems().observe(this) { user ->
+                binding.tvName.text =
+                    if (user.name.isEmpty()) "NULL" else user.name
+                binding.tvEmail.text =
+                    if (user.email.isEmpty()) "NULL" else user.email
+                binding.tvPassword.text =
+                    if (user.password.isEmpty()) "NULL" else user.password
             }
-            else -> {
-                binding.btnSave.text = getString(R.string.signup)
-                isPreferenceEmpty = true
+        }
+    }
+
+    private fun checkForm() {
+
+        UserPreference.getInstance(dataStore).getItems().asLiveData().observe(this) { userData ->
+            val getToken = userData.token
+
+            Log.e("Token", getToken)
+
+            profileViewModel = ViewModelProvider(
+                this,
+                ViewModelFactory(UserPreference.getInstance(dataStore), getToken)
+            )[ProfileViewModel::class.java]
+
+            profileViewModel.getItems().observe(this) { user ->
+                when {
+                    user.name.isNotEmpty() -> {
+                        binding.btnSave.text = getString(R.string.change)
+                        isPreferenceEmpty = false
+                    }
+                    else -> {
+                        binding.btnSave.text = getString(R.string.signup)
+                        isPreferenceEmpty = true
+                    }
+                }
             }
         }
     }

@@ -91,4 +91,11 @@ interface ApiService {
         @Query("size") size: Int?,
         @Header("Authorization") token: String
     ): GetResponse
+
+    @GET("items?category=tshirt")
+    suspend fun getStoriesTShirt(
+        @Query("page") page: Int?,
+        @Query("size") size: Int?,
+        @Header("Authorization") token: String
+    ): GetResponse
 }

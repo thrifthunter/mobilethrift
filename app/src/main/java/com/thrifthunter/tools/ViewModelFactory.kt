@@ -2,6 +2,8 @@ package com.thrifthunter
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.thrifthunter.activity.category.TShirtCategoryViewModel
+import com.thrifthunter.activity.category.paging.TShirtInjection
 import com.thrifthunter.auth.LoginViewModel
 import com.thrifthunter.auth.RegistrationViewModel
 import com.thrifthunter.activity.main.MainViewModel
@@ -16,6 +18,9 @@ class ViewModelFactory(private val mpreference: UserPreference, private val toke
         return when {
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {
                 MainViewModel(mpreference, Injection.provideRepository(token)) as T
+            }
+            modelClass.isAssignableFrom(TShirtCategoryViewModel::class.java) -> {
+                TShirtCategoryViewModel(mpreference, TShirtInjection.provideRepository(token)) as T
             }
             modelClass.isAssignableFrom(RegistrationViewModel::class.java) -> {
                 RegistrationViewModel(mpreference) as T

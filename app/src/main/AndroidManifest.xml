@@ -29,7 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thrifthunter">
         <activity
-            android:name=".activity.TShirtCategoryActivity"
+            android:name=".activity.category.TShirtCategoryActivity"
             android:exported="false" />
         <activity
             android:name="com.thrifthunter.activity.favorite.FavoriteActivity"

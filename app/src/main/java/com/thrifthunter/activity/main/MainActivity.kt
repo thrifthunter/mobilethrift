@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.activity.category.TShirtCategoryActivity
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.databinding.ActivityMainBinding
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity() {
 
         setView()
         setViewModel()
+
+        binding.button1.setOnClickListener { goToTShirt() }
     }
 
     private fun setView() {
@@ -113,5 +116,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun goToTShirt() {
+        val i = Intent(this, TShirtCategoryActivity::class.java)
+        startActivity(i)
     }
 }

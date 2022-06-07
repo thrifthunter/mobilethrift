@@ -16,12 +16,19 @@
     <list default="true" id="06fe7e9c-9ebd-40f5-bd45-e4944b7d2b38" name="Default Changelist" comment="up api">
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/TShirtCategoryActivity.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/TShirtCategoryViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/paging/TShirtInjection.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/paging/TShirtProductPagingSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/paging/TShirtProductRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/TShirtCategoryActivity.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ViewModelFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ViewModelFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tshirt_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tshirt_category.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,10 +78,13 @@
     <property name="android-custom-view/Users/aindrearayhan/Documents/kuliah/BANGKIT/capstone/mobilethrift/app/src/main/java/com/thrifthunter/customview/PasswordEditText.kt_SELECTED" value="PasswordEditText" />
     <property name="android-custom-viewC:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/java/com/thrifthunter/customview/EmailEditText.kt_SELECTED" value="EmailEditText" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/2022041916254149db8284da67ce0f5e2fe82881ae8f1a/thestoryapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/paging" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category/paging" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/category" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity" />

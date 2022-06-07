@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

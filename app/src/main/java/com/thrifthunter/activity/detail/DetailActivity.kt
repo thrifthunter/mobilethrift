@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.detail
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -7,6 +7,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.thrifthunter.R
 import com.thrifthunter.databinding.ActivityDetailBinding
 import com.thrifthunter.helper.FavoriteHelper
 import com.thrifthunter.tools.FavoriteData

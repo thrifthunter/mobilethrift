@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity
 
 import android.content.Intent
 import android.os.Build
@@ -6,9 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.Button
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.auth.RegistrationActivity
 import com.thrifthunter.databinding.ActivityLauncherBinding

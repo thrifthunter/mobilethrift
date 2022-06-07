@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.favorite
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.thrifthunter.CustomOnItemClickListener
+import com.thrifthunter.R
+import com.thrifthunter.activity.detail.DetailActivity
 import com.thrifthunter.tools.FavoriteData
 import kotlinx.android.synthetic.main.user_item.view.*
 

@@ -29,19 +29,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thrifthunter">
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".activity.TShirtCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name="com.thrifthunter.activity.favorite.FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".LauncherActivity"
+            android:name="com.thrifthunter.activity.profile.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.LauncherActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name="com.thrifthunter.activity.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.thrifthunter.activity.detail.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".auth.LoginActivity"
@@ -50,7 +53,7 @@
             android:name=".auth.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.thrifthunter.activity.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

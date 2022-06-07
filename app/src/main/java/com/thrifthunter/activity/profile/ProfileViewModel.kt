@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

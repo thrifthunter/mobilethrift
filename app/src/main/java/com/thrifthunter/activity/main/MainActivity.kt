@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.main
 
 import android.content.Context
 import android.content.Intent
@@ -15,9 +15,13 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.thrifthunter.activity.profile.ProfileActivity
+import com.thrifthunter.R
+import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.databinding.ActivityMainBinding
+import com.thrifthunter.activity.favorite.FavoriteActivity
 import com.thrifthunter.paging.LoadingStateAdapter
 import com.thrifthunter.settings.ListUserAdapter
 

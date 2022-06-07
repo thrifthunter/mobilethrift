@@ -4,8 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.auth.LoginViewModel
 import com.thrifthunter.auth.RegistrationViewModel
+import com.thrifthunter.activity.main.MainViewModel
 import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.paging.Injection
+import com.thrifthunter.activity.splash.SplashViewModel
 
 class ViewModelFactory(private val mpreference: UserPreference, private val token: String) : ViewModelProvider.NewInstanceFactory() {
 

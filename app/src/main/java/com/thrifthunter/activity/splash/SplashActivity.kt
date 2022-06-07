@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.splash
 
 import android.content.Context
 import android.content.Intent
@@ -12,7 +12,10 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
-import com.thrifthunter.auth.LoginActivity
+import com.thrifthunter.activity.LauncherActivity
+import com.thrifthunter.R
+import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.activity.main.MainActivity
 import com.thrifthunter.tools.UserPreference
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")

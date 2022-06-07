@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.favorite
 
 import android.content.Intent
 import android.database.ContentObserver
@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.thrifthunter.R
 import com.thrifthunter.database.DatabaseContract.FavColumns.Companion.CONTENT_URI
 import com.thrifthunter.helper.MappingHelper
 import com.thrifthunter.tools.FavoriteData
@@ -52,7 +53,8 @@ class FavoriteActivity : AppCompatActivity(), View.OnClickListener {
             loadAsync()
         } else {
             val list: ArrayList<FavoriteData>? = savedInstanceState.getParcelableArrayList<FavoriteData>(
-                EXTRA_STATE)
+                EXTRA_STATE
+            )
             if (list != null) {
                 adapter.listFavorite = list
             }

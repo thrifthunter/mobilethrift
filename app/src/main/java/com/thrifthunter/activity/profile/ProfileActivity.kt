@@ -1,4 +1,4 @@
-package com.thrifthunter
+package com.thrifthunter.activity.profile
 
 import android.content.Context
 import android.content.Intent
@@ -11,6 +11,8 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
+import com.thrifthunter.R
+import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.auth.RegistrationActivity
 import com.thrifthunter.auth.UserModel
 import com.thrifthunter.databinding.ActivityProfileBinding

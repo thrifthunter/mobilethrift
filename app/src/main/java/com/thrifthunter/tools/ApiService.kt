@@ -98,4 +98,13 @@ interface ApiService {
         @Query("size") size: Int?,
         @Header("Authorization") token: String
     ): GetResponse
+
+//    gw bingung gimana ngubah "item" jadi variabel
+    @GET("items?keywords={item}")
+    suspend fun getSearch(
+        @Path("item") item: String,
+        @Query("page") page: Int?,
+        @Query("size") size: Int?,
+        @Header("Authorization") token: String
+    ): GetResponse
 }

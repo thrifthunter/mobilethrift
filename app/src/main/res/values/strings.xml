@@ -37,4 +37,5 @@
     <string name="namaakun">Nama Akun</string>
     <string name="ads">VIEW ADS</string>
     <string name="empty_favorite">No favorite ads yet</string>
+    <string name="search_hint">Find secondhand products</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.thrifthunter.activity.main
 
+import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -8,6 +9,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.SearchView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -15,6 +18,7 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.thrifthunter.ApiConfig
 import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
@@ -28,6 +32,11 @@ import com.thrifthunter.databinding.ActivityMainBinding
 import com.thrifthunter.activity.favorite.FavoriteActivity
 import com.thrifthunter.paging.LoadingStateAdapter
 import com.thrifthunter.settings.ListUserAdapter
+import com.thrifthunter.tools.LoginResponse
+import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -43,11 +52,34 @@ class MainActivity : AppCompatActivity() {
 
         setView()
         setViewModel()
+        searchUser()
 
         binding.button1.setOnClickListener { goToTShirt() }
         binding.button2.setOnClickListener { goToJeans() }
         binding.button3.setOnClickListener { goToJacket() }
         binding.button4.setOnClickListener { goToShoes() }
+    }
+
+    private fun searchUser() { search.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String): Boolean {
+            if (query.isEmpty()) {
+                return true
+            } else {
+//                listData.clear()
+                getUserSearch(query)
+            }
+            return true
+        }
+
+        override fun onQueryTextChange(newText: String): Boolean {
+            return false
+        }
+    })
+    }
+
+    private fun getUserSearch(item: String) {
+//        ini tempat buat make api nya
+
     }
 
     private fun setView() {
@@ -102,6 +134,31 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
+
+        //        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+//        val searchView = menu.findItem(binding.search).actionView as SearchView
+//
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+//        searchView.queryHint = resources.getString(R.string.search_hint)
+//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//            /*
+//            ini klo search selesai ato OK
+//             */
+//            override fun onQueryTextSubmit(query: String): Boolean {
+//                Toast.makeText(this@MainActivity, query, Toast.LENGTH_SHORT).show()
+//                searchView.clearFocus()
+//                return true
+//            }
+//
+//            /*
+//            ini buat respon tiap perubahan huruf
+//             */
+//            override fun onQueryTextChange(newText: String): Boolean {
+//                return false
+//            }
+//        })
+//        return true
+
         return true
     }
 

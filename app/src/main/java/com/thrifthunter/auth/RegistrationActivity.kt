@@ -93,7 +93,7 @@ class RegistrationActivity : AppCompatActivity(), View.OnClickListener {
                                     Toast.makeText(this@RegistrationActivity, "Successfully registered!", Toast.LENGTH_SHORT).show()
                                 }
                             } else {
-                                Toast.makeText(this@RegistrationActivity, "Email is already taken", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@RegistrationActivity, response.message(), Toast.LENGTH_SHORT).show()
                             }
                         }
 

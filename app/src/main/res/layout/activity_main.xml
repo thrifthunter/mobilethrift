@@ -16,7 +16,7 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="TH"
+        android:text="Shoes"
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
@@ -31,7 +31,7 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="TH"
+        android:text="Jacket"
         android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -71,7 +71,8 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="TH"
+        android:text="T-Shirt"
+        android:textSize="13sp"
         android:textColor="#fff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -85,7 +86,8 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="TH"
+        android:text="Jeans"
+        android:textSize="13sp"
         android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />

@@ -1,4 +1,4 @@
-package com.thrifthunter.activity.category.paging
+package com.thrifthunter.activity.categoryTshirt.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

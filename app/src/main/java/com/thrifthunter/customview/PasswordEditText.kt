@@ -41,9 +41,9 @@ class PasswordEditText : AppCompatEditText {
                 // Do nothing.
             }
             override fun afterTextChanged(s: Editable) {
-                if (s.toString().length < 8) {
+                if (s.toString().length < 9) {
                     showClearButton()
-                    setError("Password must be more than 7 characters", clearButtonImage)
+                    setError("Password must be more than 8 characters", clearButtonImage)
                 } else hideClearButton()
             }
         })

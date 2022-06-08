@@ -1,4 +1,4 @@
-package com.thrifthunter.activity.category
+package com.thrifthunter.activity.categoryShoes
 
 import android.content.Context
 import android.content.Intent
@@ -13,23 +13,23 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.auth.LoginActivity
-import com.thrifthunter.databinding.ActivityTshirtCategoryBinding
+import com.thrifthunter.databinding.ActivityShoesCategoryBinding
 import com.thrifthunter.paging.LoadingStateAdapter
 import com.thrifthunter.settings.ListUserAdapter
 import com.thrifthunter.tools.UserPreference
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class TShirtCategoryActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityTshirtCategoryBinding
-    private lateinit var tShirtCategoryViewModel: TShirtCategoryViewModel
+class ShoesCategoryActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityShoesCategoryBinding
+    private lateinit var shoesCategoryViewModel: ShoesCategoryViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tshirt_category)
+        binding = ActivityShoesCategoryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setView()
         setViewModel()
@@ -45,7 +45,7 @@ class TShirtCategoryActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
         }
-        supportActionBar?.title = "Story App"
+        supportActionBar?.title = "Shoes"
     }
 
     private fun setViewModel() {
@@ -53,12 +53,12 @@ class TShirtCategoryActivity : AppCompatActivity() {
         UserPreference.getInstance(dataStore).getItems().asLiveData().observe(this) { userData ->
             val getToken = userData.token
 
-            tShirtCategoryViewModel = ViewModelProvider(
+            shoesCategoryViewModel = ViewModelProvider(
                 this,
                 ViewModelFactory(UserPreference.getInstance(dataStore), getToken)
-            )[TShirtCategoryViewModel::class.java]
+            )[ShoesCategoryViewModel::class.java]
 
-            tShirtCategoryViewModel.getStories().observe(this) { user ->
+            shoesCategoryViewModel.getStories().observe(this) { user ->
                 if (!user.status) {
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()
@@ -73,7 +73,7 @@ class TShirtCategoryActivity : AppCompatActivity() {
                 }
             )
 
-            tShirtCategoryViewModel.item.observe(this) {
+            shoesCategoryViewModel.item.observe(this) {
                 if (it!=null) {
                     adapter.submitData(lifecycle, it)
                     binding.recycleView.adapter = adapter

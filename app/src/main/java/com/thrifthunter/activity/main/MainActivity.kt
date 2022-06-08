@@ -18,7 +18,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
-import com.thrifthunter.activity.category.TShirtCategoryActivity
+import com.thrifthunter.activity.categoryJacket.JacketCategoryActivity
+import com.thrifthunter.activity.categoryShoes.ShoesCategoryActivity
+import com.thrifthunter.activity.categoryJeans.JeansCategoryActivity
+import com.thrifthunter.activity.categoryTshirt.TShirtCategoryActivity
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.databinding.ActivityMainBinding
@@ -42,6 +45,9 @@ class MainActivity : AppCompatActivity() {
         setViewModel()
 
         binding.button1.setOnClickListener { goToTShirt() }
+        binding.button2.setOnClickListener { goToJeans() }
+        binding.button3.setOnClickListener { goToJacket() }
+        binding.button4.setOnClickListener { goToShoes() }
     }
 
     private fun setView() {
@@ -120,6 +126,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToTShirt() {
         val i = Intent(this, TShirtCategoryActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun goToJeans() {
+        val i = Intent(this, JeansCategoryActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun goToJacket() {
+        val i = Intent(this, JacketCategoryActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun goToShoes() {
+        val i = Intent(this, ShoesCategoryActivity::class.java)
         startActivity(i)
     }
 }

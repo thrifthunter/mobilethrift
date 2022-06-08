@@ -1,4 +1,4 @@
-package com.thrifthunter.activity.category
+package com.thrifthunter.activity.categoryJacket
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -6,12 +6,12 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.thrifthunter.activity.category.paging.TShirtProductRepository
+import com.thrifthunter.activity.categoryShoes.paging.ShoesProductRepository
 import com.thrifthunter.auth.UserModel
 import com.thrifthunter.tools.ListItem
 import com.thrifthunter.tools.UserPreference
 
-class TShirtCategoryViewModel(private val mpreference: UserPreference, repo: TShirtProductRepository) :
+class JacketCategoryViewModel(private val mpreference: UserPreference, repo: ShoesProductRepository) :
     ViewModel() {
     fun getStories(): LiveData<UserModel> {
         return mpreference.getItems().asLiveData()

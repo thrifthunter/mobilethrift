@@ -1,6 +1,5 @@
 package com.thrifthunter.activity.main
 
-import android.app.SearchManager
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
@@ -22,10 +21,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
-import com.thrifthunter.activity.categoryJacket.JacketCategoryActivity
-import com.thrifthunter.activity.categoryShoes.ShoesCategoryActivity
-import com.thrifthunter.activity.categoryJeans.JeansCategoryActivity
-import com.thrifthunter.activity.categoryTshirt.TShirtCategoryActivity
+import com.thrifthunter.activity.categoryLongSleeve.LongSleeveCategoryActivity
+import com.thrifthunter.activity.categorySweatShirt.ShoesCategoryActivity
+import com.thrifthunter.activity.categoryShirt.ShirtCategoryActivity
+import com.thrifthunter.activity.categoryHoodie.TShirtCategoryActivity
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.databinding.ActivityMainBinding
 import com.thrifthunter.activity.favorite.FavoriteActivity
@@ -65,21 +64,18 @@ class MainActivity : AppCompatActivity() {
             if (query.isEmpty()) {
                 return true
             } else {
-//                listData.clear()
-                getUserSearch(query)
+                listItems.clear()
+                findData(query)
             }
             return true
         }
 
         override fun onQueryTextChange(newText: String): Boolean {
+            listItems.clear()
+            binding.recycleView.adapter = ListUserAdapter(listItems)
             return false
         }
     })
-    }
-
-    private fun getUserSearch(item: String) {
-//        ini tempat buat make api nya
-
     }
 
     private fun setView() {
@@ -135,54 +131,30 @@ class MainActivity : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
 
-        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        val searchView = menu?.findItem(R.id.search)?.actionView as androidx.appcompat.widget.SearchView
-
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
-        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                findData(query)
-                searchView.setQuery("", false)
-                searchView.clearFocus()
-                return true
-            }
-
-            override fun onQueryTextChange(query: String?): Boolean {
-                listItems.clear()
-                binding.recycleView.adapter = ListUserAdapter(listItems)
-                return false
-            }
-
-        })
-        return true
-
-        //        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-//        val searchView = menu.findItem(binding.search).actionView as SearchView
+//        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+//        val searchView = menu?.findItem(R.id.search)?.actionView as androidx.appcompat.widget.SearchView
 //
 //        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
-//        searchView.queryHint = resources.getString(R.string.search_hint)
-//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            /*
-//            ini klo search selesai ato OK
-//             */
+//        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
 //            override fun onQueryTextSubmit(query: String): Boolean {
-//                Toast.makeText(this@MainActivity, query, Toast.LENGTH_SHORT).show()
+//                findData(query)
+//                searchView.setQuery("", false)
 //                searchView.clearFocus()
 //                return true
 //            }
 //
-//            /*
-//            ini buat respon tiap perubahan huruf
-//             */
-//            override fun onQueryTextChange(newText: String): Boolean {
+//            override fun onQueryTextChange(query: String?): Boolean {
+//                listItems.clear()
+//                binding.recycleView.adapter = ListUserAdapter(listItems)
 //                return false
 //            }
+//
 //        })
-//        return true
+        return true
     }
 
     private fun findData(query: String) {
-        val client = apiService.getSearch(query)
+        val client = ApiConfig().getApiService().getStories(query,)
         client.enqueue(object : Callback<GetResponse> {
             override fun onResponse(call: Call<GetResponse>, response: Response<GetResponse>) {
                 if (response.isSuccessful) {
@@ -226,12 +198,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToJeans() {
-        val i = Intent(this, JeansCategoryActivity::class.java)
+        val i = Intent(this, ShirtCategoryActivity::class.java)
         startActivity(i)
     }
 
     private fun goToJacket() {
-        val i = Intent(this, JacketCategoryActivity::class.java)
+        val i = Intent(this, LongSleeveCategoryActivity::class.java)
         startActivity(i)
     }
 

@@ -1,11 +1,11 @@
-package com.thrifthunter.paging
+package com.thrifthunter.activity.categoryShirt.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.thrifthunter.tools.ApiService
 import com.thrifthunter.tools.ListItem
 
-class ThePagingSource(private val apiService: ApiService, private val token: String) : PagingSource<Int, ListItem>() {
+class ShirtProductPagingSource(private val apiService: ApiService, private val token: String) : PagingSource<Int, ListItem>() {
 
     private companion object {
         const val INITIAL_PAGE_INDEX = 1
@@ -22,7 +22,7 @@ class ThePagingSource(private val apiService: ApiService, private val token: Str
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ListItem> {
         return try {
             val position = params.key ?: INITIAL_PAGE_INDEX
-            val responseData = apiService.getStories("", position, params.loadSize, "", "Bearer $token").listItem
+            val responseData = apiService.getStories("", position, params.loadSize, "Shirt", "Bearer $token").listItem
 
 
             LoadResult.Page(

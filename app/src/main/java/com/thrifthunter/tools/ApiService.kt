@@ -87,45 +87,47 @@ interface ApiService {
 
     @GET("items")
     suspend fun getStories(
+        @Query("keyword") name: String,
         @Query("page") page: Int?,
         @Query("size") size: Int?,
+        @Query("category") category: String,
         @Header("Authorization") token: String
     ): GetResponse
 
-    @GET("items?category=tshirt")
-    suspend fun getStoriesTShirt(
-        @Query("page") page: Int?,
-        @Query("size") size: Int?,
-        @Header("Authorization") token: String
-    ): GetResponse
-
-    @GET("items?category=jacket")
-    suspend fun getStoriesJacket(
-        @Query("page") page: Int?,
-        @Query("size") size: Int?,
-        @Header("Authorization") token: String
-    ): GetResponse
-
-    @GET("items?category=shoes")
-    suspend fun getStoriesShoes(
-        @Query("page") page: Int?,
-        @Query("size") size: Int?,
-        @Header("Authorization") token: String
-    ): GetResponse
-
-    @GET("items?category=jeans")
-    suspend fun getStoriesJeans(
-        @Query("page") page: Int?,
-        @Query("size") size: Int?,
-        @Header("Authorization") token: String
-    ): GetResponse
-
-//  buat search
-    @GET("items?keywords={item}")
-    suspend fun getSearch(
-        @Path("item") item: String,
-        @Query("page") page: Int?,
-        @Query("size") size: Int?,
-        @Header("Authorization") token: String
-    ): GetResponse
+//    @GET("items?category=tshirt")
+//    suspend fun getStoriesTShirt(
+//        @Query("page") page: Int?,
+//        @Query("size") size: Int?,
+//        @Header("Authorization") token: String
+//    ): GetResponse
+//
+//    @GET("items?category=jacket")
+//    suspend fun getStoriesJacket(
+//        @Query("page") page: Int?,
+//        @Query("size") size: Int?,
+//        @Header("Authorization") token: String
+//    ): GetResponse
+//
+//    @GET("items?category=shoes")
+//    suspend fun getStoriesShoes(
+//        @Query("page") page: Int?,
+//        @Query("size") size: Int?,
+//        @Header("Authorization") token: String
+//    ): GetResponse
+//
+//    @GET("items?category=jeans")
+//    suspend fun getStoriesJeans(
+//        @Query("page") page: Int?,
+//        @Query("size") size: Int?,
+//        @Header("Authorization") token: String
+//    ): GetResponse
+//
+////  buat search
+//    @GET("items?")
+//    suspend fun getSearch(
+//        @Q
+//        @Query("page") page: Int?,
+//        @Query("size") size: Int?,
+//        @Header("Authorization") token: String
+//    ): GetResponse
 }

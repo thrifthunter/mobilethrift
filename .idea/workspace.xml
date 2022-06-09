@@ -12,19 +12,38 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fe7e9c-9ebd-40f5-bd45-e4944b7d2b38" name="Default Changelist" comment="up api">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="06fe7e9c-9ebd-40f5-bd45-e4944b7d2b38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/JacketCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/JacketCategoryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/paging/JacketInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/paging/JacketInjection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/paging/JacketProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/paging/JacketProductPagingSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/paging/JacketProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJacket/paging/JacketProductRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/JeansCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/JeansCategoryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/paging/JeansInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/paging/JeansInjection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/paging/JeansProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/paging/JeansProductPagingSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/paging/JeansProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryJeans/paging/JeansProductRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShoes/paging/ShoesInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShoes/paging/ShoesInjection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShoes/paging/ShoesProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShoes/paging/ShoesProductPagingSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryTshirt/TShirtCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryTshirt/TShirtCategoryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryTshirt/paging/TShirtInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryTshirt/paging/TShirtInjection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryTshirt/paging/TShirtProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryTshirt/paging/TShirtProductRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/main/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/RegistrationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/Injection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/Injection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/aindrearayhan/.android/avd/Pixel_2_API_Tiramisu.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[c1607b201daa2af]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

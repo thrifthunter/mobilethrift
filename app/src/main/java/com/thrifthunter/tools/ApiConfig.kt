@@ -1,7 +1,6 @@
-package com.thrifthunter
+package com.thrifthunter.tools
 
 import androidx.viewbinding.BuildConfig
-import com.thrifthunter.tools.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,7 +17,7 @@ class ApiConfig {
             .addInterceptor(loggingInterceptor)
             .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://thriftshop.csproject.org/api/v1/")
+            .baseUrl("https://thrifthunter.csproject.org/api/v1/")
 //            .baseUrl("https://spatial-lodge-350205.et.r.appspot.com/api/v1/")
 //            .baseUrl("https://story-api.dicoding.dev/v1/")
             .addConverterFactory(GsonConverterFactory.create())

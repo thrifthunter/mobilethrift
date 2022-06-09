@@ -7,11 +7,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.thrifthunter.activity.categoryShoes.paging.ShoesProductRepository
+import com.thrifthunter.activity.categoryTshirt.paging.TShirtProductRepository
 import com.thrifthunter.auth.UserModel
 import com.thrifthunter.tools.ListItem
 import com.thrifthunter.tools.UserPreference
 
-class TShirtCategoryViewModel(private val mpreference: UserPreference, repo: ShoesProductRepository) :
+class TShirtCategoryViewModel(private val mpreference: UserPreference, repo: TShirtProductRepository) :
     ViewModel() {
     fun getStories(): LiveData<UserModel> {
         return mpreference.getItems().asLiveData()

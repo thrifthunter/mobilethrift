@@ -17,7 +17,7 @@ class JeansProductRepository(private val apiService: ApiService, private val tok
                 pageSize = 10
             ),
             pagingSourceFactory = {
-                ShoesProductPagingSource(apiService,token)
+                JeansProductPagingSource(apiService,token)
             }
         ).liveData
     }

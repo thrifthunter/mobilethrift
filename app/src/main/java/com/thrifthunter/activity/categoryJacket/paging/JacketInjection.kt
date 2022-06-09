@@ -1,11 +1,10 @@
 package com.thrifthunter.activity.categoryJacket.paging
 
-import com.thrifthunter.ApiConfig
-import com.thrifthunter.activity.categoryShoes.paging.ShoesProductRepository
+import com.thrifthunter.tools.ApiConfig
 
 object JacketInjection {
-    fun provideRepository(token: String) : ShoesProductRepository {
+    fun provideRepository(token: String) : JacketProductRepository {
         val apiService = ApiConfig().getApiService()
-        return ShoesProductRepository(apiService, token)
+        return JacketProductRepository(apiService, token)
     }
 }

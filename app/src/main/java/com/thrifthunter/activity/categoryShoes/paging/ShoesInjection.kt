@@ -1,6 +1,6 @@
 package com.thrifthunter.activity.categoryShoes.paging
 
-import com.thrifthunter.ApiConfig
+import com.thrifthunter.tools.ApiConfig
 
 object ShoesInjection {
     fun provideRepository(token: String) : ShoesProductRepository {

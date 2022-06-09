@@ -1,15 +1,16 @@
 package com.thrifthunter.activity.main
 
 import android.app.SearchManager
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
@@ -18,7 +19,6 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.thrifthunter.ApiConfig
 import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
@@ -27,12 +27,11 @@ import com.thrifthunter.activity.categoryShoes.ShoesCategoryActivity
 import com.thrifthunter.activity.categoryJeans.JeansCategoryActivity
 import com.thrifthunter.activity.categoryTshirt.TShirtCategoryActivity
 import com.thrifthunter.auth.LoginActivity
-import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.databinding.ActivityMainBinding
 import com.thrifthunter.activity.favorite.FavoriteActivity
 import com.thrifthunter.paging.LoadingStateAdapter
 import com.thrifthunter.settings.ListUserAdapter
-import com.thrifthunter.tools.LoginResponse
+import com.thrifthunter.tools.*
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainViewModel: MainViewModel
+    private var listItems: ArrayList<ProductData> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -135,6 +135,27 @@ class MainActivity : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
 
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchView = menu?.findItem(R.id.search)?.actionView as androidx.appcompat.widget.SearchView
+
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                findData(query)
+                searchView.setQuery("", false)
+                searchView.clearFocus()
+                return true
+            }
+
+            override fun onQueryTextChange(query: String?): Boolean {
+                listItems.clear()
+                binding.recycleView.adapter = ListUserAdapter(listItems)
+                return false
+            }
+
+        })
+        return true
+
         //        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
 //        val searchView = menu.findItem(binding.search).actionView as SearchView
 //
@@ -158,8 +179,26 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        })
 //        return true
+    }
 
-        return true
+    private fun findData(query: String) {
+        val client = apiService.getSearch(query)
+        client.enqueue(object : Callback<GetResponse> {
+            override fun onResponse(call: Call<GetResponse>, response: Response<GetResponse>) {
+                if (response.isSuccessful) {
+                    val responseBody = response.body()
+                    if (responseBody != null) {
+                        setData(responseBody.listItem)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<GetResponse>, t: Throwable) {
+                Log.e(TAG, "onFailure: False")
+                Toast.makeText(this@MainActivity, "Gagal mengambil data", Toast.LENGTH_LONG).show()
+            }
+
+        })
     }
 
     @Suppress("UNUSED_EXPRESSION", "UNREACHABLE_CODE")

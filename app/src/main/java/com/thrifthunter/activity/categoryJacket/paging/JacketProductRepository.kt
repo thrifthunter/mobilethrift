@@ -5,6 +5,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.liveData
+import com.thrifthunter.activity.categoryJeans.paging.JacketProductPagingSource
 import com.thrifthunter.activity.categoryShoes.paging.ShoesProductPagingSource
 import com.thrifthunter.tools.ApiService
 import com.thrifthunter.tools.ListItem
@@ -17,7 +18,7 @@ class JacketProductRepository(private val apiService: ApiService, private val to
                 pageSize = 10
             ),
             pagingSourceFactory = {
-                ShoesProductPagingSource(apiService,token)
+                JacketProductPagingSource(apiService,token)
             }
         ).liveData
     }

@@ -1,16 +1,13 @@
 package com.thrifthunter.activity.main
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -18,23 +15,20 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.activity.categoryHoodie.HoodieCategoryActivity
 import com.thrifthunter.activity.categoryLongSleeve.LongSleeveCategoryActivity
-import com.thrifthunter.activity.categorySweatShirt.ShoesCategoryActivity
 import com.thrifthunter.activity.categoryShirt.ShirtCategoryActivity
-import com.thrifthunter.activity.categoryHoodie.TShirtCategoryActivity
+import com.thrifthunter.activity.categorySweatShirt.SweatShirtCategoryActivity
+import com.thrifthunter.activity.favorite.FavoriteActivity
+import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.databinding.ActivityMainBinding
-import com.thrifthunter.activity.favorite.FavoriteActivity
 import com.thrifthunter.paging.LoadingStateAdapter
 import com.thrifthunter.settings.ListUserAdapter
-import com.thrifthunter.tools.*
-import kotlinx.android.synthetic.main.activity_main.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.thrifthunter.tools.ProductData
+import com.thrifthunter.tools.UserPreference
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -51,32 +45,33 @@ class MainActivity : AppCompatActivity() {
 
         setView()
         setViewModel()
-        searchUser()
+//        searchUser()
 
-        binding.button1.setOnClickListener { goToTShirt() }
-        binding.button2.setOnClickListener { goToJeans() }
-        binding.button3.setOnClickListener { goToJacket() }
-        binding.button4.setOnClickListener { goToShoes() }
+        binding.button1.setOnClickListener { goToHoodie() }
+        binding.button2.setOnClickListener { goToLongSleeve() }
+        binding.button3.setOnClickListener { goToShirt() }
+        binding.button4.setOnClickListener { goToSweatShirt() }
+        binding.refresh.setOnClickListener { refresh() }
     }
 
-    private fun searchUser() { search.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
-        override fun onQueryTextSubmit(query: String): Boolean {
-            if (query.isEmpty()) {
-                return true
-            } else {
-                listItems.clear()
-                findData(query)
-            }
-            return true
-        }
-
-        override fun onQueryTextChange(newText: String): Boolean {
-            listItems.clear()
-            binding.recycleView.adapter = ListUserAdapter(listItems)
-            return false
-        }
-    })
-    }
+//    private fun searchUser() { search.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+//        override fun onQueryTextSubmit(query: String): Boolean {
+//            if (query.isEmpty()) {
+//                return true
+//            } else {
+//                listItems.clear()
+//                findData(query)
+//            }
+//            return true
+//        }
+//
+//        override fun onQueryTextChange(newText: String): Boolean {
+//            listItems.clear()
+//            binding.recycleView.adapter = ListUserAdapter(listItems)
+//            return false
+//        }
+//    })
+//    }
 
     private fun setView() {
         @Suppress("DEPRECATION")
@@ -153,25 +148,25 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    private fun findData(query: String) {
-        val client = ApiConfig().getApiService().getStories(query,)
-        client.enqueue(object : Callback<GetResponse> {
-            override fun onResponse(call: Call<GetResponse>, response: Response<GetResponse>) {
-                if (response.isSuccessful) {
-                    val responseBody = response.body()
-                    if (responseBody != null) {
-                        setData(responseBody.listItem)
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<GetResponse>, t: Throwable) {
-                Log.e(TAG, "onFailure: False")
-                Toast.makeText(this@MainActivity, "Gagal mengambil data", Toast.LENGTH_LONG).show()
-            }
-
-        })
-    }
+//    private fun findData(query: String) {
+//        val client = ApiConfig().getApiService().getStories(query,)
+//        client.enqueue(object : Callback<GetResponse> {
+//            override fun onResponse(call: Call<GetResponse>, response: Response<GetResponse>) {
+//                if (response.isSuccessful) {
+//                    val responseBody = response.body()
+//                    if (responseBody != null) {
+//                        setData(responseBody.listItem)
+//                    }
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<GetResponse>, t: Throwable) {
+//                Log.e(TAG, "onFailure: False")
+//                Toast.makeText(this@MainActivity, "Gagal mengambil data", Toast.LENGTH_LONG).show()
+//            }
+//
+//        })
+//    }
 
     @Suppress("UNUSED_EXPRESSION", "UNREACHABLE_CODE")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -192,23 +187,28 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun goToTShirt() {
-        val i = Intent(this, TShirtCategoryActivity::class.java)
+    private fun goToHoodie() {
+        val i = Intent(this, HoodieCategoryActivity::class.java)
         startActivity(i)
     }
 
-    private fun goToJeans() {
+    private fun goToShirt() {
         val i = Intent(this, ShirtCategoryActivity::class.java)
         startActivity(i)
     }
 
-    private fun goToJacket() {
+    private fun goToLongSleeve() {
         val i = Intent(this, LongSleeveCategoryActivity::class.java)
         startActivity(i)
     }
 
-    private fun goToShoes() {
-        val i = Intent(this, ShoesCategoryActivity::class.java)
+    private fun goToSweatShirt() {
+        val i = Intent(this, SweatShirtCategoryActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun refresh() {
+        val i = Intent(this, MainActivity::class.java)
         startActivity(i)
     }
 }

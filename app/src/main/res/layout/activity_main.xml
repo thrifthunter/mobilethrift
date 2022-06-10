@@ -16,8 +16,9 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Shoes"
+        android:text="Sweat\nshirt"
         android:textColor="#fff"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -31,7 +32,8 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Jacket"
+        android:text="Shirt"
+        android:textSize="12dp"
         android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -71,8 +73,8 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="T-Shirt"
-        android:textSize="13sp"
+        android:text="Hoodie"
+        android:textSize="12dp"
         android:textColor="#fff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -86,19 +88,29 @@
         android:background="@drawable/round_button"
         android:backgroundTint="@color/primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Jeans"
-        android:textSize="13sp"
+        android:text="Long\nSleeve"
+        android:textSize="12dp"
         android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="220dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refresh"
         tools:listitem="@layout/user_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

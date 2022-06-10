@@ -8,11 +8,11 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.thrifthunter.auth.UserModel
 import com.thrifthunter.tools.UserPreference
-import com.thrifthunter.paging.TheRepository
+import com.thrifthunter.paging.ProductRepository
 import com.thrifthunter.tools.ListItem
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val mpreference: UserPreference, theRepository: TheRepository) :
+class MainViewModel(private val mpreference: UserPreference, productRepository: ProductRepository) :
     ViewModel() {
     fun getStories(): LiveData<UserModel> {
         return mpreference.getItems().asLiveData()
@@ -24,5 +24,5 @@ class MainViewModel(private val mpreference: UserPreference, theRepository: TheR
         }
     }
 
-    val item : LiveData<PagingData<ListItem>> = theRepository.getStories().cachedIn(viewModelScope)
+    val item : LiveData<PagingData<ListItem>> = productRepository.getStories().cachedIn(viewModelScope)
 }

@@ -40,6 +40,7 @@ class ListUserAdapter: PagingDataAdapter<ListItem, ListUserAdapter.ListViewHolde
                 .load(user.photoUrl)
                 .into(binding.imgItemPhoto)
             binding.tvItemName.text = user.name
+            binding.tvItemDescription.text = user.account
 
             binding.root.setOnClickListener {
                 val dataUser = ProductData(user.name, user.photoUrl, user.description, user.account, user.price, user.category)
@@ -49,8 +50,9 @@ class ListUserAdapter: PagingDataAdapter<ListItem, ListUserAdapter.ListViewHolde
                 val optionsCompat : ActivityOptionsCompat =
                     ActivityOptionsCompat.makeSceneTransitionAnimation(
                         binding.root.context as Activity,
-                        Pair(binding.tvItemName, "nameStory"),
-                        Pair(binding.imgItemPhoto, "imageStory"),
+                        Pair(binding.tvItemName, "name"),
+                        Pair(binding.imgItemPhoto, "image"),
+                        Pair(binding.tvItemDescription, "account")
                     )
                 binding.root.context.startActivity(intent, optionsCompat.toBundle())
             }

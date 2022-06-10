@@ -5,7 +5,7 @@ import androidx.paging.PagingState
 import com.thrifthunter.tools.ApiService
 import com.thrifthunter.tools.ListItem
 
-class ThePagingSource(private val apiService: ApiService, private val token: String) : PagingSource<Int, ListItem>() {
+class ProductPagingSource(private val apiService: ApiService, private val token: String) : PagingSource<Int, ListItem>() {
 
     private companion object {
         const val INITIAL_PAGE_INDEX = 1

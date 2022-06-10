@@ -3,8 +3,8 @@ package com.thrifthunter.paging
 import com.thrifthunter.tools.ApiConfig
 
 object Injection {
-    fun provideRepository(token: String) : TheRepository{
+    fun provideRepository(token: String) : ProductRepository{
         val apiService = ApiConfig().getApiService()
-        return TheRepository(apiService, token)
+        return ProductRepository(apiService, token)
     }
 }

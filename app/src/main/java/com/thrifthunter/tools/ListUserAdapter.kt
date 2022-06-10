@@ -1,4 +1,4 @@
-package com.thrifthunter.settings
+package com.thrifthunter.tools
 
 import android.app.Activity
 import android.content.Intent

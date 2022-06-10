@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.thrifthunter.R
-import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.tools.ViewModelFactory
 import com.thrifthunter.activity.categoryHoodie.HoodieCategoryActivity
 import com.thrifthunter.activity.categoryLongSleeve.LongSleeveCategoryActivity
 import com.thrifthunter.activity.categoryShirt.ShirtCategoryActivity
@@ -26,8 +26,7 @@ import com.thrifthunter.activity.profile.ProfileActivity
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.databinding.ActivityMainBinding
 import com.thrifthunter.paging.LoadingStateAdapter
-import com.thrifthunter.settings.ListUserAdapter
-import com.thrifthunter.tools.ProductData
+import com.thrifthunter.tools.ListUserAdapter
 import com.thrifthunter.tools.UserPreference
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainViewModel: MainViewModel
-    private var listItems: ArrayList<ProductData> = ArrayList()
+//    private var listItems: ArrayList<ProductData> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,7 +82,7 @@ class MainActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
         }
-        supportActionBar?.title = "Story App"
+        supportActionBar?.title = "Thrift Hunter"
     }
 
     private fun setViewModel() {

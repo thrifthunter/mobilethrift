@@ -6,7 +6,7 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.thrifthunter.auth.UserModel
+import com.thrifthunter.tools.UserModel
 import com.thrifthunter.tools.UserPreference
 import com.thrifthunter.paging.ProductRepository
 import com.thrifthunter.tools.ListItem

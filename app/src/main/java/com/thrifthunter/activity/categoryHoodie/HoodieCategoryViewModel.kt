@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.thrifthunter.activity.categoryHoodie.paging.HoodieProductRepository
-import com.thrifthunter.auth.UserModel
+import com.thrifthunter.tools.UserModel
 import com.thrifthunter.tools.ListItem
 import com.thrifthunter.tools.UserPreference
 

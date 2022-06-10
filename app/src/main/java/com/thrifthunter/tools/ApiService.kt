@@ -41,8 +41,8 @@ data class GetResponse(
     @field:SerializedName("message")
     val message: String,
 
-    @field:SerializedName("listStory")
-    val listItem: List<ListItem>
+    @field:SerializedName("items")
+    val items: List<ListItem>
 )
 
 data class ListItem(
@@ -86,7 +86,7 @@ interface ApiService {
     ) : Call<LoginResponse>
 
     @GET("items")
-    suspend fun getStories(
+    suspend fun getProduct(
         @Query("keyword") name: String,
         @Query("page") page: Int?,
         @Query("size") size: Int?,

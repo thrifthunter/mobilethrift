@@ -18,9 +18,10 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.tools.ApiConfig
 import com.thrifthunter.R
-import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.tools.ViewModelFactory
 import com.thrifthunter.databinding.ActivityRegistrationBinding
 import com.thrifthunter.tools.RegisterResponse
+import com.thrifthunter.tools.UserModel
 import com.thrifthunter.tools.UserPreference
 import retrofit2.Call
 import retrofit2.Callback

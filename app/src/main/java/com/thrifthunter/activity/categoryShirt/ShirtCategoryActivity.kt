@@ -13,11 +13,11 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.tools.ViewModelFactory
 import com.thrifthunter.auth.LoginActivity
 import com.thrifthunter.databinding.ActivityShirtCategoryBinding
 import com.thrifthunter.paging.LoadingStateAdapter
-import com.thrifthunter.settings.ListUserAdapter
+import com.thrifthunter.tools.ListUserAdapter
 import com.thrifthunter.tools.UserPreference
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")

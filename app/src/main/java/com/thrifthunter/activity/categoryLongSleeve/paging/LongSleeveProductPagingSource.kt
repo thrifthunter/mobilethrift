@@ -22,7 +22,7 @@ class LongSleeveProductPagingSource(private val apiService: ApiService, private 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ListItem> {
         return try {
             val position = params.key ?: INITIAL_PAGE_INDEX
-            val responseData = apiService.getStories("", position, params.loadSize, "Long Sleeve", "Bearer $token").listItem
+            val responseData = apiService.getProduct("", position, params.loadSize, "Long Sleeve", "Bearer $token").items
 
 
             LoadResult.Page(

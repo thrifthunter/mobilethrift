@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import com.thrifthunter.activity.LauncherActivity
 import com.thrifthunter.R
-import com.thrifthunter.ViewModelFactory
+import com.thrifthunter.tools.ViewModelFactory
 import com.thrifthunter.activity.main.MainActivity
 import com.thrifthunter.tools.UserPreference
 

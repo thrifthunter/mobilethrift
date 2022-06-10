@@ -1,4 +1,4 @@
-package com.thrifthunter.auth
+package com.thrifthunter.tools
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

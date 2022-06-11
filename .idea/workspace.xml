@@ -10,138 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed6c956a-f555-4643-9236-306fd5278143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/Database/Favorites.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/Database/FavoritesDB.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/Database/FavoritesDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/favorite/FavBarangAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ListBarangAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/response/ListItemBarang.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/thrifthunter.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/thrifthunter.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/thrifthunter/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/thrifthunter/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/LauncherActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/LauncherActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/HoodieCategoryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/HoodieCategoryActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/HoodieCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/HoodieCategoryViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/paging/HoodieInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/paging/HoodieInjection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/paging/HoodieProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/paging/HoodieProductPagingSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/paging/HoodieProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryHoodie/paging/HoodieProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/LongSleeveCategoryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/LongSleeveCategoryActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/LongSleeveCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/LongSleeveCategoryViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/paging/LongSleeveInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/paging/LongSleeveInjection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/paging/LongSleeveProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/paging/LongSleeveProductPagingSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/paging/LongSleeveProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryLongSleeve/paging/LongSleeveProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/ShirtCategoryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/ShirtCategoryActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/ShirtCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/ShirtCategoryViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/paging/ShirtInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/paging/ShirtInjection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/paging/ShirtProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/paging/ShirtProductPagingSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/paging/ShirtProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categoryShirt/paging/ShirtProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/SweatShirtCategoryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/SweatShirtCategoryActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/SweatShirtCategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/SweatShirtCategoryViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/paging/SweatShirtInjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/paging/SweatShirtInjection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/paging/SweatShirtProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/paging/SweatShirtProductPagingSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/paging/SweatShirtProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/categorySweatShirt/paging/SweatShirtProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/DetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/DetailActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/DetailViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/detail/DetailViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/favorite/FavoriteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/favorite/FavoriteActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/favorite/FavoriteAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/favorite/FavoriteAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/main/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/main/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/profile/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/profile/ProfileActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/profile/ProfileViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/profile/ProfileViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/splash/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/splash/SplashActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/splash/SplashViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/activity/splash/SplashViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/LoginViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/RegistrationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/RegistrationActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/RegistrationViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/auth/RegistrationViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/customview/EmailEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/customview/EmailEditText.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/customview/PasswordEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/customview/PasswordEditText.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/database/DatabaseContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/database/DatabaseContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/database/DatabaseHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/database/DatabaseHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/helper/FavoriteHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/helper/FavoriteHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/helper/MappingHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/helper/MappingHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/Injection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/Injection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/LoadingStateAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/LoadingStateAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/ProductPagingSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/ProductPagingSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/ProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/paging/ProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/FavoriteData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/FavoriteData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ListUserAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ListUserAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ProductData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ProductData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/UserModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/UserModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/UserPreference.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/UserPreference.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ViewModelFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/thrifthunter/tools/ViewModelFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_error_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_error_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_login_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_login_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_map_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_map_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_person_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_person_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_capture.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_capture.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_favorite_filled.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_favorite_filled.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_favorite_unfilled.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_favorite_unfilled.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_place_holder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_place_holder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_switch_camera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_switch_camera.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_border.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_primary.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_primary.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/layout_bg_white.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/roundedcorner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/roundedcorner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_favorite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_favorite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_hoodie_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hoodie_category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_long_sleeve_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_long_sleeve_category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shirt_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shirt_category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sweat_shirt_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sweat_shirt_category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_loading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_loading.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/main_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-land/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-land/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-w1240dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-w1240dp/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-w600dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-w600dp/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/thrifthunter/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/thrifthunter/ExampleUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,6 +110,18 @@
       <option name="presentableId" value="Default" />
       <updated>1654946554466</updated>
     </task>
+    <task id="LOCAL-00001" summary="hampir kelar">
+      <created>1654948653535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654948653535</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hampir kelar" />
+    <option name="LAST_COMMIT_MESSAGE" value="hampir kelar" />
   </component>
 </project>

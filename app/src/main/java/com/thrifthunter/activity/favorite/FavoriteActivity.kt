@@ -27,13 +27,14 @@ class FavoriteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFavoriteBinding
     private val db by lazy { FavoritesDB(this) }
     lateinit var favBarangAdapter: FavBarangAdapter
+    private var flag : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupActionBar()
-        binding.tvNull.setVisibility(View.INVISIBLE)
+        binding.tvNull.setVisibility(View.VISIBLE)
         binding.progressBar.setVisibility(View.VISIBLE)
         setupRecyclerView()
     }
@@ -52,22 +53,34 @@ class FavoriteActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             var favBarang = db.favoritesDao().getFavorites()
             if (favBarang.size == 0) {
-                binding.tvNull.setVisibility(View.VISIBLE)
-                binding.progressBar.setVisibility(View.VISIBLE)
+                flag = true
+            }
+            else {
+                flag = false
             }
             favBarangAdapter.setData(favBarang)
             withContext(Dispatchers.Main) {
                 favBarangAdapter.notifyDataSetChanged()
             }
         }
+        if (flag) {
+            binding.tvNull.setVisibility(View.VISIBLE)
+            binding.progressBar.setVisibility(View.GONE)
+        }
     }
     private fun setupRecyclerView () {
-        favBarangAdapter = FavBarangAdapter(arrayListOf())
-        binding.recycleView.apply {
-            layoutManager = LinearLayoutManager(applicationContext)
-            adapter = favBarangAdapter
+        if (flag) {
+            binding.tvNull.setVisibility(View.VISIBLE)
+            binding.progressBar.setVisibility(View.GONE)
         }
-        binding.tvNull.setVisibility(View.GONE)
-        binding.progressBar.setVisibility(View.GONE)
+        else {
+            favBarangAdapter = FavBarangAdapter(arrayListOf())
+            binding.recycleView.apply {
+                layoutManager = LinearLayoutManager(applicationContext)
+                adapter = favBarangAdapter
+            }
+            binding.tvNull.setVisibility(View.GONE)
+            binding.progressBar.setVisibility(View.GONE)
+        }
     }
 }

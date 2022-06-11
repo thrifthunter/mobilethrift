@@ -71,4 +71,7 @@ dependencies {
     implementation "androidx.paging:paging-runtime-ktx:3.1.1"
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation "androidx.core:core-ktx:1.7.0"
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

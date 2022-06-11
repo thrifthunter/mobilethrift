@@ -1,6 +1,7 @@
 package com.thrifthunter.tools
 
 import com.google.gson.annotations.SerializedName
+import com.thrifthunter.tools.response.ListItemBarang
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -93,6 +94,14 @@ interface ApiService {
         @Query("category") category: String,
         @Header("Authorization") token: String
     ): GetResponse
+
+
+    @GET("items")
+     fun getProductItem(
+        @Query("keyword") name: String,
+        @Query("page") page: Int?,
+        @Query("size") size: Int?
+    ): Call<ListItemBarang>
 
 //    @GET("items?category=tshirt")
 //    suspend fun getStoriesTShirt(

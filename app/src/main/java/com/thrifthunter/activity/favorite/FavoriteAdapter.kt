@@ -51,8 +51,8 @@ class FavoriteAdapter(private val activity: Activity) : RecyclerView.Adapter<Fav
                         object : CustomOnItemClickListener.OnItemClickCallback {
                             override fun onItemClicked(view: View, position: Int) {
                                 val intent = Intent(activity, DetailActivity::class.java)
-                                intent.putExtra(DetailActivity.EXTRA_POSITION, position)
-                                intent.putExtra(DetailActivity.EXTRA_NOTE, fav)
+//                                intent.putExtra(DetailActivity.EXTRA_POSITION, position)
+//                                intent.putExtra(DetailActivity.EXTRA_NOTE, fav)
                                 activity.startActivity(intent)
                             }
                         }

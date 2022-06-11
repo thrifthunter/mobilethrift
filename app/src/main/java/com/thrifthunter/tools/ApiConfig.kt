@@ -8,18 +8,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     fun getApiService(): ApiService {
-        val loggingInterceptor = if(BuildConfig.DEBUG) {
+        val loggingInterceptor =
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        } else {
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
-        }
         val client = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .build()
         val retrofit = Retrofit.Builder()
             .baseUrl("https://thrifthunter.csproject.org/api/v1/")
-//            .baseUrl("https://spatial-lodge-350205.et.r.appspot.com/api/v1/")
-//            .baseUrl("https://story-api.dicoding.dev/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

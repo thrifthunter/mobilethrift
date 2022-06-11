@@ -1,5 +1,7 @@
 package com.thrifthunter.activity.detail
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
@@ -11,6 +13,7 @@ import com.thrifthunter.tools.response.ValuesItem
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+
 
 class DetailActivity : AppCompatActivity() {
 
@@ -63,6 +66,7 @@ class DetailActivity : AppCompatActivity() {
             }
         }
         FavoritesButton()
+        binding.btnAds.setOnClickListener { goToAd() }
     }
 //
     private fun setData() {
@@ -71,11 +75,12 @@ class DetailActivity : AppCompatActivity() {
 
         // dummy image
         val data = intent.getParcelableExtra<ValuesItem>("DATA")
-        Picasso.get().load("https://picsum.photos/500").into(binding.detailPhoto);
+        Picasso.get().load("https://pbs.twimg.com/media/FLiN50sagAER-u6.jpg").into(binding.detailPhoto);
         binding.detailName.text = data?.name
         binding.detailAkun.text = data?.account
         binding.detailHarga.text = "Rp " + data?.price.toString()
         binding.detailDescription.text = data?.description
+//        binding.btnAds.setOnClickListener { goToAd() }
     }
 
     private fun FavoritesButton() {
@@ -110,6 +115,12 @@ class DetailActivity : AppCompatActivity() {
     private fun setupActionBar() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Detail Produk"
+    }
+
+    private fun goToAd() {
+//        if (!url.startsWith("http://") && !url.startsWith("https://"))
+//            url = "http://" + url;
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/foodcaine/status/1493099316063641601/photo/1")))
     }
 //
 //    private fun setView() {

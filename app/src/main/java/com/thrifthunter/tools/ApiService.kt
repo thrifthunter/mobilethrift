@@ -100,7 +100,8 @@ interface ApiService {
      fun getProductItem(
         @Query("keyword") name: String,
         @Query("page") page: Int?,
-        @Query("size") size: Int?
+        @Query("size") size: Int?,
+        @Query("category") category: String
     ): Call<ListItemBarang>
 
 //    @GET("items?category=tshirt")

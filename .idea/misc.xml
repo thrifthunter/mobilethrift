@@ -3,15 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/Downloads/thrifthunterBangkit-master/thrifthunterBangkit-master/app/src/main/res/layout/activity_detail.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/User/Downloads/thrifthunterBangkit-master/thrifthunterBangkit-master/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/User/Downloads/thrifthunterBangkit-master/thrifthunterBangkit-master/app/src/main/res/layout/user_item.xml" value="0.358695652173913" />
-        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.18162384033203127" />
-        <entry key="app/src/main/res/layout/activity_favorite.xml" value="0.13854166666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32528381347656254" />
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.146875" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/drawable/layout_bg_search.xml" value="0.2985" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_detail.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_favorite.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_jacket_category.xml" value="0.3625" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_jeans_category.xml" value="0.3625" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_launcher.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_profile.xml" value="0.3625" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_registration.xml" value="0.3591485507246377" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_shoes_category.xml" value="0.3625" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/layout/activity_tshirt_category.xml" value="0.3625" />
+        <entry key="..\:/Users/User/Desktop/thrifthunter/mobileapp/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.10144927536231885" />
+        <entry key="app/src/main/res/layout/activity_hoodie_category.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_jacket_category.xml" value="0.128125" />
+        <entry key="app/src/main/res/layout/activity_jeans_category.xml" value="0.128125" />
+        <entry key="app/src/main/res/layout/activity_long_sleeve_category.xml" value="0.12083333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_shirt_category.xml" value="0.12083333333333333" />
+        <entry key="app/src/main/res/layout/activity_sweat_shirt_category.xml" value="0.10144927536231885" />
+        <entry key="app/src/main/res/layout/activity_tshirt_category.xml" value="0.10144927536231885" />
+        <entry key="app/src/main/res/layout/item_loading.xml" value="0.14175724637681159" />
         <entry key="app/src/main/res/layout/user_item.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.165" />
       </map>
     </option>
   </component>

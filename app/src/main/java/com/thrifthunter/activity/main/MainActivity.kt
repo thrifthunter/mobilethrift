@@ -62,8 +62,8 @@ class MainActivity : AppCompatActivity() {
         binding.button3.setOnClickListener { goToShirt() }
         binding.button4.setOnClickListener { goToSweatShirt() }
         binding.refresh.setOnClickListener { getAllData() }
-        binding.imgNext.setOnClickListener { nextIndex()}
-        binding.imgPrev.setOnClickListener { prevIndex()}
+        binding.imgNext.setOnClickListener { nextIndex() }
+        binding.imgPrev.setOnClickListener { prevIndex() }
         binding.tvIndex.text = index.toString()
     }
 
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getAllData() {
         binding.progressBar.setVisibility(View.VISIBLE)
-        val service = ApiConfig().getApiService().getProductItem("",0, 0)
+        val service = ApiConfig().getApiService().getProductItem("",0, 0, "")
         service.enqueue(object : Callback<ListItemBarang> {
             override fun onResponse(
                 call: Call<ListItemBarang>,
@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getIndexBarang(indeksPage:Int, name : String) {
         binding.progressBar.setVisibility(View.VISIBLE)
-        val service = ApiConfig().getApiService().getProductItem(name,indeksPage, 5)
+        val service = ApiConfig().getApiService().getProductItem(name,indeksPage, 5, "")
         service.enqueue(object : Callback<ListItemBarang> {
             override fun onResponse(
                 call: Call<ListItemBarang>,
@@ -306,11 +306,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToSweatShirt() {
         val i = Intent(this, SweatShirtCategoryActivity::class.java)
-        startActivity(i)
-    }
-
-    private fun refresh() {
-        val i = Intent(this, MainActivity::class.java)
         startActivity(i)
     }
 }

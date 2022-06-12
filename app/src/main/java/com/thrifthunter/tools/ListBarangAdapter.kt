@@ -31,8 +31,8 @@ class ListBarangAdapter(private val listBarang: ArrayList<ValuesItem>) : Recycle
         private var descPost: TextView = itemView.findViewById(R.id.tv_item_description)
 
         fun bind(barangModel: ValuesItem) {
-            Picasso.get().load("https://pbs.twimg.com/media/FLiN50sagAER-u6.jpg").into(photoPost);
-//            Picasso.get().load(barangModel.photoUrl).into(photoPost);
+//            Picasso.get().load("https://pbs.twimg.com/media/FLiN50sagAER-u6.jpg").into(photoPost);
+            Picasso.get().load(barangModel.photoUrl).into(photoPost);
             namePost.text = barangModel.name
             descPost.text = barangModel.description
 

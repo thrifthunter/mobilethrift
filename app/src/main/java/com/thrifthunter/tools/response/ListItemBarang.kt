@@ -26,6 +26,9 @@ data class ValuesItem(
 	@field:SerializedName("photoUrl")
 	val photoUrl: String? = null,
 
+	@field:SerializedName("sourceUrl")
+	val sourceUrl: String? = null,
+
 	@field:SerializedName("name")
 	val name: String? = null,
 

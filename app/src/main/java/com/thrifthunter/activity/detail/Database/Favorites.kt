@@ -10,6 +10,7 @@ data class Favorites(
     val id: Int = 0,
     val price: Int? = null,
     val photoUrl: String? = null,
+    val sourceUrl: String? = null,
     val name: String? = null,
     val description: String? = null,
     val category: String? = null,

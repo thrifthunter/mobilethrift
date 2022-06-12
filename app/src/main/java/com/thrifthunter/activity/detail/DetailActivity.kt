@@ -66,7 +66,7 @@ class DetailActivity : AppCompatActivity() {
             }
         }
         FavoritesButton()
-        binding.btnAds.setOnClickListener { goToAd() }
+//        binding.btnAds.setOnClickListener { goToAd() }
     }
 //
     private fun setData() {
@@ -75,12 +75,12 @@ class DetailActivity : AppCompatActivity() {
 
         // dummy image
         val data = intent.getParcelableExtra<ValuesItem>("DATA")
-        Picasso.get().load("https://pbs.twimg.com/media/FLiN50sagAER-u6.jpg").into(binding.detailPhoto);
+        Picasso.get().load(data?.photoUrl).into(binding.detailPhoto);
         binding.detailName.text = data?.name
         binding.detailAkun.text = data?.account
         binding.detailHarga.text = "Rp " + data?.price.toString()
         binding.detailDescription.text = data?.description
-//        binding.btnAds.setOnClickListener { goToAd() }
+        binding.btnAds.setOnClickListener { goToAd(data?.sourceUrl) }
     }
 
     private fun FavoritesButton() {
@@ -99,6 +99,7 @@ class DetailActivity : AppCompatActivity() {
                             0,
                             data?.price,
                             data?.photoUrl,
+                            data?.sourceUrl,
                             data?.name,
                             data?.description,
                             data?.category,
@@ -117,10 +118,10 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.title = "Detail Produk"
     }
 
-    private fun goToAd() {
+    private fun goToAd(url: String?) {
 //        if (!url.startsWith("http://") && !url.startsWith("https://"))
 //            url = "http://" + url;
-        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/foodcaine/status/1493099316063641601/photo/1")))
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
     }
 //
 //    private fun setView() {

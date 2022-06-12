@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.detail.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/detail_photo"
@@ -59,20 +64,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_name" />
 
-    <TextView
-        android:id="@+id/detail_description"
-        android:layout_width="373dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/primary"
-        android:gravity="top|left"
-        android:text="@string/description"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_akun" />
+        <TextView
+            android:id="@+id/detail_description"
+            android:layout_width="373dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/primary"
+            android:gravity="top|left"
+            android:text="@string/description"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_akun" />
 
         <TextView
             android:id="@+id/bars"
@@ -87,30 +92,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_description" />
 
-    <Button
-        android:id="@+id/btn_ads"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="@color/primary"
-        android:text="@string/ads"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bars" />" />
+        <Button
+            android:id="@+id/btn_ads"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/primary"
+            android:text="@string/ads"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bars" />" />
 
-    <ImageButton
-        android:id="@+id/btnfav"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/roundedcorner"
-        android:src="@drawable/ic_favorite_favorite_unfilled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bars" />
+        <ImageButton
+            android:id="@+id/btnfav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/roundedcorner"
+            android:src="@drawable/ic_favorite_favorite_unfilled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bars" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 
@@ -127,4 +136,4 @@
 <!--        app:layout_constraintTop_toTopOf="@+id/bars"-->
 <!--        app:layout_constraintVertical_bias="0.647" />-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -30,39 +30,49 @@
         android:theme="@style/Theme.Thrifthunter">
         <activity
             android:name=".activity.categoryShirt.ShirtCategoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.categoryHoodie.HoodieCategoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.categorySweatShirt.SweatShirtCategoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.categoryLongSleeve.LongSleeveCategoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.thrifthunter.activity.favorite.FavoriteActivity"
             android:exported="false"
-            android:parentActivityName=".activity.main.MainActivity"/>
+            android:parentActivityName=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.thrifthunter.activity.profile.ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LauncherActivity"
             android:exported="false" />
         <activity
             android:name="com.thrifthunter.activity.main.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.thrifthunter.activity.detail.DetailActivity"
             android:exported="false"
-            android:parentActivityName=".activity.main.MainActivity"/>
+            android:parentActivityName=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".auth.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".auth.RegistrationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.thrifthunter.activity.splash.SplashActivity"
             android:exported="true">
